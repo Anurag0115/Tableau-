@@ -1,0 +1,152 @@
+Exercise 1: Basic Dimension Filter
+Create a Sales by Sub-Category bar chart.
+- Apply a Region filter.
+- Display only the West region.
+- Change the selection to East, Central, and South.
+- Observe how the chart changes.
+
+Exercise 2: Multiple Values Filter
+- Create a Sales by Category chart.
+- Filter the Segment field.
+- Select Consumer and Corporate.
+- Test single-value and multiple-value selection controls.
+
+Exercise 3: Wildcard Filter
+- Use the Product Name field.
+- Create a filter using the Wildcard Match option.
+- Practise Contains, Starts With, Ends With, and Exact Match.
+- Compare the products displayed for different patterns.
+Exercise 4: Condition Filter
+- Filter Sub-Category based on a condition.
+- Create a condition based on aggregated Sales.
+- Create another condition using aggregated Profit.
+- Compare the categories or sub-categories that remain.
+Exercise 5: Show Filter Card
+- Create a Sales by State chart.
+- Display Region and Category filters.
+- Change the filters interactively.
+- Configure the filter cards to suit the worksheet.
+
+Section 2 — Measure Filters
+Exercises 6–9
+Exercise 6: SUM(Sales) Filter
+Create a Sales by Sub-Category chart.
+- Filter using SUM(Sales).
+- Practise a range of sales values.
+- Compare the results with different minimum and maximum values.
+
+Exercise 7: Profit Filter
+- Create a Category and Sub-Category view.
+- Filter using SUM(Profit).
+- Investigate positive and negative profit values.
+- Compare the displayed categories before and after filtering.
+
+Exercise 8: Measure Filter — At Least and At Most
+- Create a Sales by Product Name chart.
+- Practise At Least, At Most, and Range of Values.
+- Observe which products remain when the limits change.
+
+Exercise 9: Quantity and Discount Filters
+- Create a view showing Sales, Quantity, and Discount.
+- Apply filters to Quantity and Discount.
+- Test different ranges and compare the resulting view.
+
+
+Section 3 — Date Filters
+Exercises 10–13
+Exercise 10: Discrete Date Filter
+- Create a monthly Sales chart using Order Date.
+- Practise selecting individual years, quarters, and months.
+- Compare discrete date selections with continuous dates.
+
+Exercise 11: Range of Dates
+- Create a Sales trend chart.
+- Apply a range filter to Order Date.
+- Restrict the view to a selected start and end date.
+- Change the date range and observe the trend.
+
+Exercise 12: Relative Date Filter
+- Apply a relative date filter to Order Date.
+- Practise the last, current, and previous date periods available.
+- Compare the results for days, months, quarters, and years.
+
+Exercise 13: Date and Region Combination
+- Create a monthly Sales chart.
+- Add Order Date and Region filters.
+- Select different date periods and regions.
+- Explain how the combined filters affect the trend.
+
+
+Section 4 — Top N, Condition and Context Filters
+Exercises 14–18
+Exercise 14: Top 10 Products by Sales
+- Create a Product Name filter.
+- Configure it to display the Top 10 products by Sales.
+- Change the number from 10 to 5 and then 15.
+- Repeat the exercise using Profit.
+
+Exercise 15: Bottom 10 Products
+- Find the Bottom 10 products by Sales.
+- Repeat using Profit.
+- Compare the results and identify products with negative profit.
+
+Exercise 16: Conditional Filter
+- Filter Sub-Category using a field condition.
+- Create a second condition using a formula.
+- Compare the results when the condition changes.
+
+Exercise 17: Context Filter
+- Create a Top 5 Sub-Category by Sales view.
+- Apply Region as a normal filter.
+- Repeat after adding Region to context.
+- Record the categories displayed in each case.
+- Explain why the results differ or remain the same.
+
+Exercise 18: Multiple Filters and Order of Operations
+- Combine Region, Category, and Top N filters.
+- Change the order in which you configure the filters.
+- Add and remove context from selected filters.
+- Document how the final results change.
+
+
+Section 5 — Extract and Data Source Filters
+Exercises 19–21
+Exercise 19: Extract Filter
+- Connect to Sample Superstore.
+- Configure an extract filter using Order Date.
+- Create an extract containing a selected date period.
+- Compare the available data with the original full dataset.
+
+Exercise 20: Data Source Filter
+- Open the Data Source page.
+- Add a data source filter on Region.
+- Create a worksheet using the filtered source.
+- Examine the available regions and compare them with the original source.
+
+Exercise 21: Compare Filter Levels
+- Create separate copies of your workbook.
+- Apply an extract filter in one copy.
+- Apply a data source filter in another.
+- Compare the data available to the worksheets and the effect on the workbook.
+
+
+Section 6 — Table Calculation Filters
+Exercises 22–24
+Exercise 22: Rank Filter
+- Create a Sales by Sub-Category chart.
+- Create a rank table calculation using Sales.
+- Filter the view to show only the first five ranks.
+- Change the calculation direction and observe the results.
+
+Exercise 23: Running Total Filter
+- Create a monthly Sales chart.
+- Add a running total table calculation.
+- Apply a table calculation filter.
+- Observe how the displayed marks change.
+
+Exercise 24: Table Calculation vs Top N Filter
+- Create two worksheets showing Sales by Sub-Category.
+- Apply a Top 5 dimension filter to one worksheet.
+- Apply a rank-based table calculation filter to the other.
+- Compare the results when Region is filtered normally and when it is added to context.
+
