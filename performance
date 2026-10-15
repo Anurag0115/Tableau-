@@ -1,0 +1,33 @@
+Tableau Performance Optimization Techniques
+
+1. Use Extracts Instead of Live Connections
+Use Tableau Extracts (.hyper) when real-time data is not required. Extracts often improve performance by reducing repeated queries against the source database.
+Example: Superstore sales analysis using an extract.
+
+2. Reduce the Number of Records
+Filter unnecessary dates, regions, categories, and historical records at the data source level when appropriate.
+Example: Analyze the latest three years instead of 15 years.
+
+3. Reduce the Number of Worksheets
+Every worksheet on a dashboard can add rendering and query overhead. Remove unnecessary charts and avoid duplicating similar worksheets.
+
+4. Optimize Calculated Fields
+Simplify nested IF statements, avoid redundant calculations, and move suitable calculations to the database or data-preparation layer.
+Example: Precompute profit margin when appropriate.
+
+5. Optimize Filters
+Use only necessary filters. High-cardinality filters, such as Customer Name or Order ID, can be expensive, particularly when showing all values.
+6. Optimize Joins and Relationships
+Remove unnecessary tables, avoid accidental many-to-many row multiplication, and validate join keys and data grain.
+7. Simplify Dashboard Design
+Avoid excessive marks, complex visualizations, too many containers, and unnecessary dashboard objects.
+8. Use Performance Recording
+Identify whether delays come from queries, calculations, layout, or rendering before making changes.
+
+9. Use Context Filters only when they help the query plan; they are not automatically faster.
+10. Optimize LOD expressions such as {FIXED}, {INCLUDE}, and {EXCLUDE}.
+11. Reduce the number of quick filters that display all values.https://codeshare.io/
+12. Use efficient SQL queries and database indexes where appropriate.
+13. Reduce unnecessary dashboard actions and cross-filtering.
+14. Limit the number of marks displayed in maps and detailed tables.
+15. Optimize Tableau Server or Tableau Cloud extracts, concurrency, caching, and data-source performance.
