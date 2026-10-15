@@ -1,0 +1,109 @@
+Task 1: Build Dynamic Filters Using Parameters and Set Actions
+Objective
+Create an interactive dashboard where users can dynamically filter data using parameters and set actions.
+
+Steps
+Open Tableau Desktop and load any sample dataset (e.g., Superstore).
+Go to Data → Add to Data Source and verify fields such as Category, Sub-Category, Sales.
+Create a parameter:
+Right-click → Create Parameter
+Name: Select Category
+Data type: String
+Allowable values: List → import values from Category
+Create a calculated field to use the parameter:
+Name: Category Filter
+Formula: IF [Category] = [Select Category] THEN 1 ELSE 0 END
+Drag a chart (e.g., bar chart of Sub-Category vs Sales) onto the canvas.
+Drag Category Filter to Filters → Keep only 1.
+Show parameter control → change values → verify the chart updates.
+Add a sheet with Category labels → convert to Set → enable Set Action from Dashboard.
+Build a dashboard → Add both sheets → Dashboard → Actions → Change Set Values → allow clicking categories to update.
+Hint
+Use Set Actions when you want interaction by clicking on the visual instead of only using parameter dropdowns.
+
+Example
+Selecting Furniture in the parameter should filter the bar chart to only furniture-related sub-categories.
+
+
+
+Task 2: Perform What-If Analysis with Parameters
+Objective
+Use numeric parameters to simulate changes such as discount or sales growth.
+
+Steps
+Create a new parameter named Growth Factor.
+Data type: Float; Allowable values: Range 0 to 2; Step size: 0.1.
+Create a calculated field Adjusted Sales:
+([Sales] * [Growth Factor])
+Build a line chart showing sales over time.
+Duplicate the sheet → replace Sales with Adjusted Sales.
+Build a dashboard showing both original and adjusted charts.
+Add the parameter control so the user can adjust the growth factor.
+Hint
+Values like 1.2 mean “increase by 20%,” while 0.8 means “decrease by 20%.”
+
+Example
+If Growth Factor = 1.5, then a sale of 1000 shows as 1500 in the adjusted chart.
+
+Task 3: Create Advanced Visuals (Sankey, Radial, Maps)
+Objective
+Build advanced charts that Tableau does not provide by default.
+
+Steps
+A. Sankey Chart
+Create a dataset with a source-to-destination flow (e.g., Category → Sub-Category).
+Create a calculated field named Curve using:
+SIN(PI() * [Index] / [Total Points])
+Create a path field using INDEX() → set the table calculation to Pane Down.
+Plot Curve vs Path as a line → convert the marks type to Polygon.
+Drag Sales to Size.
+B. Radial Chart
+Create fields for angle and radius:
+Angle: INDEX() * (2 * PI() / TOTAL(COUNT([Sub-Category])))
+Radius: [Sales]
+Create X and Y fields:
+X = [Radius] * COS([Angle])
+Y = [Radius] * SIN([Angle])
+Drag X to Columns and Y to Rows → convert marks to line.
+C. Maps
+Use a dataset with fields like State, City, or Country.
+Drag State to canvas → Tableau automatically generates a filled map.
+Drag Sales to Color to create a heat map.
+Hint
+Advanced visuals rely on calculated fields and table calculations, not built-in charts.
+
+Example
+A Sankey chart visually shows how total sales flow from Category to Sub-Category.
+
+
+
+Task 4: Analytics & Optimization (Forecasting, Clustering, Performance)
+Objective
+Apply Tableau’s built-in analytics tools to optimize insights and performance.
+
+Steps
+A. Forecasting
+Create a line chart of Sales over Order Date.
+Open Analytics Pane → Forecast → drag to the sheet.
+Choose model type: Automatic or Custom (Multiplicative).
+B. Clustering
+Use a scatter plot (e.g., Sales vs Profit).
+Go to Analytics Pane → Clusters → drag onto the view.
+Set the number of clusters (e.g., 3).
+C. Cohort Analysis
+Create fields like Customer Join Month:
+DATETRUNC('month', MIN([Order Date]))
+Build a cohort view using customer count over months.
+D. Extracts vs Live Connection Optimization
+Switch data source to Extract → Observe performance improvement.
+Compare with Live Connection on refresh speed.
+Enable Performance Recording (Help → Settings → Start Recording).
+Review workbook’s load and query times.
+Hint
+Use Extracts for large datasets to improve speed; use Live when real-time data is required.
+
+Example
+Clustering Sales vs Profit into 3 groups helps identify low-profit customers instantly.
+
+Remarks
+No remarks added
